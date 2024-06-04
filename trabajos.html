@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos Realizados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+        .playfair-display-font {
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            margin: 5%;
+            font-family: "Playfair Display", serif;
+            background-color: rgb(99, 149, 207);
+        }
+
+        header {
+            background-color: rgb(0, 59, 126);
+            border-radius: 10px;
+        }
+
+        main {
+            margin-top: 40px;
+        }
+
+        #top-menu > a {
+            text-decoration: none;
+            color: white;
+        }
+        #top-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            line-height: 70px;
+            font-size: 20px;
+            color: white;
+        }
+
+        #trabajos-con {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .trabajo {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            background-color: white;
+        }
+        .trabajo img {
+            max-width: 100%;
+            height: auto;
+        }
+        .trabajo.active {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="top-menu">
+            <a href="index.html">Home</a>
+            <span>|</span>
+            <a href="trabajos.html">Trabajo realizado</a>
+            <span>|</span>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </header>
+    
+    <main>
+        <div id="trabajos-con">
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image.png">
+                <h3>Spotify</h3>
+                <p style="display: none;">Web con diferentes canciones estilo spotify</p>
+                <a href="./trabajos/Ex1-Spotify/index.html" style="display: none;">Ver más</a>
+            </div>
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image2.jpg">
+                <h3>Liga futbol</h3>
+                <p style="display: none;">Web de la liga española</p>
+                <a href="./trabajos/Ex2-lliga-futbol/" style="display: none;">Ver más</a>
+            </div>
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image3.jpg">
+                <h3>F1</h3>
+                <p style="display: none;">Web de clasificacion de diferentes competidores de la F1</p>
+                <a href="./trabajos/Ex3-carreres F1/" style="display: none;">Ver más</a>
+            </div>
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image4.jpg">
+                <h3>Shang-chi</h3>
+                <p style="display: none;">Web promocional de la pelicula de Shang-chi</p>
+                <a href="./trabajos/Portada-publi-Marvel -Shang‑Chi/" style="display: none;">Ver más</a>
+            </div>
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image4.jpg">
+                <h3>Shang-chi</h3>
+                <p style="display: none;">Web promocional de la pelicula de Shang-chi</p>
+                <a href="./trabajos/Portada-publi-Marvel -Shang‑Chi/" style="display: none;">Ver más</a>
+            </div>
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image3.jpg">
+                <h3>F1</h3>
+                <p style="display: none;">Web de clasificacion de diferentes competidores de la F1</p>
+                <a href="./trabajos/Ex3-carreres F1/" style="display: none;">Ver más</a>
+            </div>
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image2.jpg">
+                <h3>Liga futbol</h3>
+                <p style="display: none;">Web de la liga española</p>
+                <a href="./trabajos/Ex2-lliga-futbol/" style="display: none;">Ver más</a>
+            </div>
+            <div class="trabajo" onclick="expandJob(this)">
+                <img src="./img/image.png">
+                <h3>Spotify</h3>
+                <p style="display: none;">Web con diferentes canciones estilo spotify</p>
+                <a href="./trabajos/Ex1-Spotify/index.html" style="display: none;">Ver más</a>
+            </div>    
+        </div>
+    </main>
+   
+
+    <script>
+        function expandJob(element) {
+            // Desactivar la clase active en todos los elementos .trabajo
+            const trabajos = document.querySelectorAll('.trabajo');
+            trabajos.forEach(trabajo => {
+                trabajo.classList.remove('active');
+                // Ocultar los enlaces de todos los elementos .trabajo
+                const links = trabajo.querySelectorAll('a');
+                const desc = trabajo.querySelectorAll('p');
+                links.forEach(link => {
+                    link.style.display = 'none';
+                });
+                desc.forEach(d => {
+                    d.style.display = 'none';
+                });
+            });
+    
+            // Activar la clase active solo en el elemento clicado
+            element.classList.add('active');
+            // Mostrar el enlace del elemento clicado
+            const links = element.querySelectorAll('a');
+            const desc = element.querySelectorAll('p');
+            links.forEach(link => {
+                link.style.display = 'block';
+            });
+            desc.forEach(d => {
+                d.style.display = 'block';
+            });
+        }
+    </script>
+    
+</body>
+</html>

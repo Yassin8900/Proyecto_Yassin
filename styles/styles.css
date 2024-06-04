@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+/* Mobile */
+@media (min-width: 576px) {
+    body {
+        font-size: 10px;
+    }
+
+    #presentation-con {
+        width: 100%;
+    }
+
+    .formacion .card {
+        flex: 1 1 100%;
+    }
+}
+
+/*Tablets*/
+@media (min-width: 768px){
+    body {
+        font-size: 12px;
+    }
+
+    #presentation-con {
+        width: 100%;
+    }
+
+    .formacion .card {
+        flex: 1 1 50%;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+
+    #presentation-con {
+        width: 50%;
+    }
+
+    .formacion .card {
+        flex: 1 1 33.33%;
+    }
+}
+
+
+
+.playfair-display-font {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 5%;
+    font-family: "Playfair Display", serif;
+    background-color: rgb(99, 149, 207);
+}
+
+header {
+    background-color: rgb(0, 59, 126);
+    border-radius: 10px;
+}
+
+#top-menu>span {
+    color: white;
+}
+
+#top-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+#presentation-con {
+    width: 40%;
+    text-align: left;
+    padding: 40px;
+    color: white;
+}
+
+#presentation-background {
+    margin: 40px;
+    background-image: url("../backgrounds/1.jpg");
+    background-repeat: initial;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.aptitudes-list li {
+    margin-bottom: 10px;
+}
+
+.formacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.formacion .card {
+    background-color: rgb(21, 119, 255);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 30%;
+}
+
+.experiencia .presentacion {
+    background-color: rgb(21, 119, 255);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.barra {
+    background-color: rgb(21, 119, 255);
+    height: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.idioma {
+    margin-bottom: 20px;
+}
+
+
